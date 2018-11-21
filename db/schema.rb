@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_110116) do
+ActiveRecord::Schema.define(version: 2018_11_13_233730) do
+
+  create_table "crono_jobs", force: :cascade do |t|
+    t.string "job_id", null: false
+    t.text "log", limit: 1073741823
+    t.datetime "last_performed_at"
+    t.boolean "healthy"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_crono_jobs_on_job_id", unique: true
+  end
 
   create_table "quotes", force: :cascade do |t|
     t.string "quote"
@@ -34,10 +44,22 @@ ActiveRecord::Schema.define(version: 2018_10_28_110116) do
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
+  create_table "timers", force: :cascade do |t|
+    t.integer "task_id"
+    t.integer "hours", default: 0
+    t.integer "minutes", default: 0
+    t.integer "seconds", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["task_id"], name: "index_timers_on_task_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.string "confirm_code"
+    t.boolean "confirm", default: false
     t.string "password"
     t.string "salt"
     t.datetime "created_at", null: false

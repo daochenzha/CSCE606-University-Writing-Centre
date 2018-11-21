@@ -13,8 +13,8 @@
              <%= f.select :measure, ['Pages','Words'] , {label: "Measurement"}%>
              <%= f.text_field :target_value, label: "Target Value: ",required: true%>
              <%= f.form_group :email, label: {text: "Email: "} do %>
-              <%= f.radio_button :email, "Yes", label: "Yes", checked: true %>
-              <%= f.radio_button :email, "No", label: "No" %>
+              <%= f.radio_button :email, true, label: "Yes", checked: true %>
+              <%= f.radio_button :email, false, label: "No" %>
             <% end %>
             <%= f.text_area :desc , label: "Description: "%>
             <div class="text-center"> <%= f.submit :Update , {:class=>'btn btn-info'}%></div>
