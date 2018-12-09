@@ -6,9 +6,6 @@ Feature: Create new user on university writing tracker
 
 Background: login page
 
-    Given the following users exist:
-      | Amith | Murakonda | amithmurakonda@gmail.com || 1 | $2a$10$Mt.ehSw8N3N8eIs0MpmEI./rSuWAreOu9aLqFDWIYsRCp004/af7G | $2a$10$Mt.ehSw8N3N8eIs0MpmEI. |
-
     Scenario: add user
       When I am on "create" users page
       And  I fill in "First Name" with "Amith"
@@ -22,6 +19,6 @@ Background: login page
     Scenario: User login
     When I am on "login" users page
     And I fill in "Email" with "amithmurakonda@gmail.com"
-    And I fill in "Password" with "amith@123"
+    And I fill in "Password" with "amith123"
     And I press "Login"
-    Then I should be on 'auth' page
+    Then I should be redirected to 'users' page

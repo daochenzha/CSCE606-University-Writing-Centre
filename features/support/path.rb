@@ -18,6 +18,8 @@ module NavigationHelpers
       '/users/login'
     when /the edit page for "(.*)"$/
       edit_movie_path(Movie.where("title=?",$1).first)
+    when /^users$/
+      '/users'
 
     when /index$/
       '/users'

@@ -7,10 +7,11 @@ Rails.application.routes.draw do
   post 'users/reset_password2', to:'users#reset_password_2', as: 'reset2'
   get 'users/login', to: 'users#login', as: 'login'
   post 'users/authenticate', to: 'users#auth', as:'auth'
+  get 'users', to: 'users#index', as: 'users'
   get 'users/logout', to: 'users#logout', as: 'logout'
   root 'users#landing'
-  post '/admin/update', to: 'users#update_admin', as: 'update_admin'
-  get '/admin', to: 'users#admin', as: 'admin'
+  post 'admin/update', to: 'users#update_admin', as: 'update_admin'
+  get 'admin', to: 'users#admin', as: 'admin'
   get 'users/mail_auth', to:'users#mail_confirm'
   resources :users do
     resources :tasks

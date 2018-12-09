@@ -83,7 +83,7 @@ class UsersController < ApplicationController
       redirect_to users_path and return
     else
       flash[:notice] = "Invalid Username or Password"
-      render :login
+      redirect_to login_path
     end
   end
 

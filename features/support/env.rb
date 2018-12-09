@@ -7,6 +7,9 @@
 require 'cucumber/rails'
 require 'simplecov'
 SimpleCov.start 'rails'
+require "factory_girl/step_definitions"
+require "factory_girl"
+require "test/factories"
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
 # selectors in your step definitions to use the XPath syntax.

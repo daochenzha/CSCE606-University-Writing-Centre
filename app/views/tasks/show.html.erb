@@ -48,48 +48,6 @@
         </div>
         </div>
         </div>
-        <div class="col-md-6 text-center" style="">
-            <div class="timer" style="visibility: hidden;">
-
-            </div>
-            <div class="row">
-              <div class="col-md-4 col-sm-12 text-center">
-                <div class="text-center">
-                  <div id="prog-hour" class="progress" data-percentage="0">
-                    <span class="progress-left"><span class="progress-bar"></span></span>
-                    <span class="progress-right"><span class="progress-bar"></span></span>
-                    <div class="progress-value">
-                  <div>
-                    <div id="hours">0</div> <span>Hours</span>
-                  </div>
-                </div>
-                </div>
-              </div>
-              </div>
-              <div class="col-md-4 col-sm-12">
-                <div id="prog-min" class="progress" data-percentage="0">
-                  <span class="progress-left"><span class="progress-bar"></span></span>
-                  <span class="progress-right"><span class="progress-bar"></span></span>
-                  <div class="progress-value">
-                <div>
-                  <div id="minutes">0</div> <span>Minutes</span>
-                </div>
-              </div>
-              </div>
-              </div>
-              <div class="col-md-4 col-sm-12">
-                <div id="prog-sec" class="progress" data-percentage="0">
-                  <span class="progress-left"><span class="progress-bar"></span></span>
-                  <span class="progress-right"><span class="progress-bar"></span></span>
-                  <div class="progress-value">
-                <div>
-                  <div id="seconds">0</div> <span> Seconds</span>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       </div>
       <div class="row" style="margin-top:7%">
@@ -122,18 +80,18 @@
       </div>
 
 <br><br><br><br><br>
-      <div class="col-md-10 text-center" >
+      <div class="conatiner text-center" >
           <div class="timer" style="visibility: hidden;">
             </div>
-          <div class="row" style="text-center">
+          <div class="row text-center">
             <div class="col-md-4 col-sm-12 text-center">
               </div>
             <div class="col-md-2 col-sm-12 text-center">
               <div class="text-center">
                 <div id="prog-hour" class="progress1" data-percentage="0">
-                  <span class="progress-left1"><span class="progress-bar1"></span></span>
-                  <span class="progress-right1"><span class="progress-bar1"></span></span>
-                  <div class="progress-value1">
+                  <span class="progress1-left"><span class="progress1-bar"></span></span>
+                  <span class="progress1-right"><span class="progress1-bar"></span></span>
+                  <div class="progress1-value">
                     <div>
                       <div id="hours">0</div>
                       <span>Hours</span>
@@ -144,9 +102,9 @@
             </div>
             <div class="col-md-2 col-sm-12">
               <div id="prog-min" class="progress1" data-percentage="0">
-                <span class="progress-left1"><span class="progress-bar1"></span></span>
-                <span class="progress-right1"><span class="progress-bar1"></span></span>
-                <div class="progress-value1">
+                <span class="progress1-left"><span class="progress1-bar"></span></span>
+                <span class="progress1-right"><span class="progress1-bar"></span></span>
+                <div class="progress1-value">
               <div>
                 <div id="minutes">0</div> <span>Minutes</span>
               </div>
@@ -155,9 +113,9 @@
             </div>
             <div class="col-md-2 col-sm-12">
               <div id="prog-sec" class="progress1" data-percentage="0">
-                <span class="progress-left1"><span class="progress-bar1"></span></span>
-                <span class="progress-right1"><span class="progress-bar1"></span></span>
-                <div class="progress-value1">
+                <span class="progress1-left"><span class="progress1-bar"></span></span>
+                <span class="progress1-right"><span class="progress1-bar"></span></span>
+                <div class="progress1-value">
               <div>
                 <div id="seconds">0</div> <span> Seconds</span>
               </div>
@@ -170,21 +128,22 @@
         <div class="row" style="margin-top:2%">
         <div class="col-sm-4"></div>
         <div class="col-sm-1 text-center">
-          <a href="#" class="btn btn-success" onClick="$('.timer').countimer('start');" data-toggle="modal" data-target="#myTimer" style="margin-right:20%;margin-left:190%;">Start</a>
+          <a class="btn btn-success" onClick="$('.timer').countimer('start');">Start</a>
         </div>
         <div class="col-sm-1">
-          <a class="btn btn-warning" onClick="$('.timer').countimer('stop');" style="margin-right:10%;margin-left:170%;><span class="	glyphicon glyphicon-pause"></span>Pause</a>
+          <a class="btn btn-warning" onClick="$('.timer').countimer('stop');"><span class="glyphicon glyphicon-pause"></span>Pause</a>
         </div>
         <div class="col-sm-1 ">
-           <button class="btn btn-success" onClick="$('.timer').countimer('resume');" style="margin-right:10%;margin-left:170%;><span class="glyphicon glyphicon-play"></span>Resume</button>
+           <button class="btn btn-success" onClick="$('.timer').countimer('resume');"><span class="glyphicon glyphicon-play"></span>Resume</button>
         </div>
         <div class="col-sm-1 ">
-          <button type="button" id="timer_stop" class="btn btn-danger" onClick="$('.timer').countimer('stop');" data-dismiss="modal" style="margin-right:10%;margin-left:170%;> <span class="glyphicon glyphicon-stop"></span>Stop</button>
+          <button type="button" id="timer_stop" class="btn btn-danger" onClick="$('.timer').countimer('stop');">
+             <span class="glyphicon glyphicon-stop"></span>Stop</button>
         </div>
         <div class="col-sm-4 text-center"></div>
-</div>
-        <div class="row text-center" >
-          <div class="container" style="margin-top:7%; margin-left:120px;">
+      </div>
+        <div class="container text-center" style="padding-top: 7%;">
+          <div class="container text-center">
             <div class="text-center">
               <label>View Progress</label>
             </div>
@@ -194,7 +153,7 @@
         <br><br>
 
         <br><br><br><br><br>
-        <div class="row" style="margin-bottom:17%;" >
+        <div class="row" style="margin-bottom:17%;margin-top:5%;" >
           <div class="col-md-4 text-center">
             </div>
           <div class="col-md-2 text-center">
