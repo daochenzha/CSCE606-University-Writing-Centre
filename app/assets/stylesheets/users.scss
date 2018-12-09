@@ -15,20 +15,18 @@ margin-bottom: 0rem;
 .navbar{
 padding: 0rem 0rem;
 margin-bottom: 0rem;
-background-color: #474e5d;
+background-color: #9f9a96;
 font-color: white;
 border-radius: 0px;
 }
 
-$borderWidth: 7px;
+$borderWidth: 17px;
 $animationTime: 0s;
 $animationTime2: 1.5s;
 $border-color-default: #eee;
 $border-color-fill: #53c67b;
-$size: 180px;
-//Create how many steps
-$howManySteps: 100; //this needs to be even.
-//for fun try using 20 and changine in the HTML the data-percentage to 15 or 85
+$size: 200px;
+$howManySteps: 100;
 .progress {
 width: $size;
 height: $size;
@@ -75,7 +73,6 @@ border-bottom-right-radius: ($size/2);;
 border-left: 0;
 -webkit-transform-origin: center left;
 transform-origin: center left;
-//animation: loading-2 1.5s linear forwards 1.8s;
 }
 .progress-right {
 right: 0;
@@ -86,10 +83,99 @@ border-bottom-left-radius: ($size/2);;
 border-right: 0;
 -webkit-transform-origin: center right;
 transform-origin: center right;
-//animation: loading-1 1.8s linear forwards;
 }
+}
+.li .a{
+  color: #ffffff;
 }
 .progress-value {
+display: flex;
+border-radius: 50%;
+font-size: 36px;
+text-align: center;
+line-height: 20px;
+align-items: center;
+justify-content: center;
+height: 100%;
+//font-family: $work-sans;
+font-weight: 300;
+div {
+margin-top: 10px;
+}
+span {
+font-size: 12px;
+text-transform: uppercase;
+}
+}
+}
+
+$borderWidth1: 6px;
+$animationTime: 0s;
+$animationTime2: 1.5s;
+$border-color-default: #eee;
+$border-color-fill: #53c67b;
+$size1: 120px;
+$howManySteps: 100;
+
+.progress1 {
+width: $size1;
+height: $size1;
+line-height: $size1;
+background: none;
+margin: 0 auto;
+box-shadow: none;
+position: relative;
+&:after {
+content: "";
+width: 100%;
+height: 100%;
+border-radius: 50%;
+border: $borderWidth1 solid $border-color-default;
+position: absolute;
+top: 0;
+left: 0;
+}
+> span {
+width: 50%;
+height: 100%;
+overflow: hidden;
+position: absolute;
+top: 0;
+z-index: 1;
+}
+.progress-left1 {
+left: 0;
+}
+.progress-bar1 {
+width: 100%;
+height: 100%;
+background: none;
+border-width: $borderWidth1;
+border-style: solid;
+position: absolute;
+top: 0;
+border-color: $border-color-fill;
+}
+.progress-left1 .progress-bar1 {
+left: 100%;
+border-top-right-radius: ($size1/2);;
+border-bottom-right-radius: ($size1/2);;
+border-left: 0;
+-webkit-transform-origin: center left;
+transform-origin: center left;
+}
+.progress-right1 {
+right: 0;
+.progress-bar1 {
+left: -100%;
+border-top-left-radius: ($size1/2);;
+border-bottom-left-radius: ($size1/2);;
+border-right: 0;
+-webkit-transform-origin: center right;
+transform-origin: center right;
+}
+}
+.progress-value1 {
 display: flex;
 border-radius: 50%;
 font-size: 36px;
@@ -137,16 +223,6 @@ animation: loading-#{$i - ($howManySteps/2)} $animationTime linear forwards $ani
 }
 }
 }
-}
-
-.footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: red;
-color: white;
-text-align: center;
 }
 
 //animation
@@ -274,16 +350,6 @@ animation: loading-#{$i - ($howManySteps/2)} $animationTime2 linear forwards $an
 }
 }
 
-.footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: red;
-color: white;
-text-align: center;
-}
-
 //animation
 @for $i from 1 through ($howManySteps/2) {
 $degrees: (180/($howManySteps/2));
@@ -315,13 +381,16 @@ width: 40%;
 }
 h3 {
 text-align: center;
+font-family: "Playfair Display";
+font-weight: bold;
+font-size: 40px;
 }
 .bg-1 {
-background-color: #1abc9c; /* Green */
+background-color: #406a75;
 color: #ffffff;
 }
 .bg-2 {
-background-color: #474e5d; /* Dark Blue */
+background-color: #9f9a96; /* Dark Blue */
 color: #ffffff;
 }
 .bg-3 {
@@ -329,7 +398,7 @@ background-color: #ffffff; /* White */
 color: #555555;
 }
 .bg-4 {
-background-color: #2f2f2f; /* Black Gray */
+background-color: #848283; /* Black Gray */
 color: #fff;
 }
 .container-fluid {
